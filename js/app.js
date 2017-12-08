@@ -92,19 +92,7 @@ $("video").prop("volume", 0.5);
 //URL______________________________
 function changeURL() {
     var newURL = document.getElementById("newURL").value;
-	var x;
-	x = document.getElementById("newURL").value;
-    if (x == "")
     document.getElementById("element").src=newURL;
-}
-
-function empty() {
-    var x;
-    x = document.getElementById("newURL").value;
-    if (x == "") {
-        alert("Enter a Valid Roll Number");
-        return false;
-    };
 }
 
 
