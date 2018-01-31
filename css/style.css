@@ -1,9 +1,5 @@
-.primary {
-    background: ;
-}
-
-.dark {
-    background: black
+.theme {
+    background: #FAFAFA;
 }
 
 * {
@@ -31,27 +27,31 @@ html, body {
 }
 
 #contrastFilter {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     background-color: black;
     z-index: 1;
-    opacity: 0.2;
+    opacity: 0;
     pointer-events: none;
 }
 
+.video-container {
+    height: 40vh;
+}
+
 video {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    background: black;
     top: 0;
     resize: both;
     filter: brightness(1);
 }
 
 video::-webkit-media-controls {
-    font-family: Space Mono;
+    font-family: "Space Mono";
     opacity: 0.9;
     filter: grayscale();
 }
@@ -66,21 +66,37 @@ video::-webkit-media-controls-timeline {}
 
 .input-container {
     position: relative;
+    height: 100%;
     width: 100vw;
-    padding: 20px;
-    background: #FAFAFA;
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
-    margin-bottom: calc(100vh + 4px);
     z-index: 2;
 }
 
 input {
     position: relative;
     max-width: calc(100% - 28px);
-    background: #FAFAFA;
+    background: white;
     color: #212121;
     margin: 10px;
     padding: 4px;
     border-radius: 2px;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 1px rgba(0, 0, 0, 0.4)
+}
+
+label {
+    margin: 10px;
+    display: inline-block;
+}
+
+.select {
+    background: black;
+    text-align: center;
+    padding: 5px 23px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+@media screen and (orientation:landscape) {
+    .video-container {
+        height: 100vh;
+    }
 }
