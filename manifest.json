@@ -1,6 +1,6 @@
 {
-    "short_name": "PushUp",
-    "name": "PushUp",
+    "short_name": "Video",
+    "name": "Video",
     "display": "fullscreen",
     "icons": [{
             "src": "img/icon-48.png",
@@ -23,7 +23,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "/index.html",
+    "start_url": "https://rohitparida27.github.io/video/",
     "background_color": "#212121",
     "theme_color": "#304FFE"
 }
