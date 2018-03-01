@@ -5,7 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Space Mono', monospace, sans-serif;
+    font-family: 'Product Sans', monospace, sans-serif;
     cursor: default;
     user-select: none;
     outline: none;
@@ -51,7 +51,6 @@ video {
 }
 
 video::-webkit-media-controls {
-    font-family: "Space Mono";
     opacity: 0.9;
     filter: grayscale();
 }
@@ -82,13 +81,17 @@ input {
     left: 55px;
 }
 
+input::placeholder {
+    color: rgba(0, 0, 0, 0.38);
+}
+
 .botmbar {
     background: white;
     bottom: 0;
     position: absolute;
     height: 55px;
     width: 100vw;
-    border-top: 1px solid #979797
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 label {
@@ -102,6 +105,14 @@ label {
 
 .send {
     right: 0;
+}
+
+svg {
+    fill: rgba(0, 0, 0, 0.38);
+}
+
+svg:hover {
+    fill: rgba(0, 0, 0, 0.54);
 }
 
 span svg {
