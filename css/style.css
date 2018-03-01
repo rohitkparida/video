@@ -51,6 +51,7 @@ video {
 }
 
 video::-webkit-media-controls {
+    font-family: 'Product Sans';
     opacity: 0.9;
     filter: grayscale();
 }
@@ -101,6 +102,7 @@ label {
     position: absolute;
     height: 24px;
     padding: 15.5px;
+    transition: all 0.1s;
 }
 
 .send {
@@ -111,8 +113,12 @@ svg {
     fill: rgba(0, 0, 0, 0.38);
 }
 
-svg:hover {
+svg:active {
     fill: rgba(0, 0, 0, 0.54);
+}
+
+label:active {
+    background: #4caf50;
 }
 
 span svg {
