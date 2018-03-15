@@ -102,7 +102,6 @@ label {
     position: absolute;
     height: 24px;
     padding: 15.5px;
-    transition: all 0.1s;
 }
 
 .send {
@@ -113,13 +112,13 @@ svg {
     fill: rgba(0, 0, 0, 0.38);
 }
 
-svg:active {
+/* svg:active {
     fill: rgba(0, 0, 0, 0.54);
 }
 
 label:active {
     background: #4caf50;
-}
+} */
 
 span svg {
     position: absolute;
