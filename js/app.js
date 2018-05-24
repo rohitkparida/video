@@ -23,7 +23,7 @@
         var fileURL = URL.createObjectURL(file)
         videoNode.src = fileURL
     }
-    var inputNode = document.querySelector('input')
+    var inputNode = document.querySelector('.receiver')
     inputNode.addEventListener('change', playSelectedFile, false)
 })()
 
