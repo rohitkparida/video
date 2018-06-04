@@ -28,6 +28,33 @@
 })()
 
 
+
+
+document.querySelector('video').playbackRate = 3.0;
+
+
+// STATUS-----------
+
+// var element = $('#element');
+//
+// element.waiting(function() {
+//     console.log(this);
+//     if (this.paused) {
+//         $(".status").addClass("playing");
+//     } else {
+//         $(".status").addClass("error");
+//     }
+// });
+
+// Disable_sendBtn-----------------------------
+function success() {
+    if (document.getElementById("newURL").value === "") {
+        document.getElementById('send').disabled = true;
+    } else {
+        document.getElementById('send').disabled = false;
+    }
+}
+
 // Pause control
 // $("video").click(function() {
 //   //console.log(this);
@@ -38,7 +65,7 @@
 //   }
 // });
 
-// ____________________________SWIPE
+// ____________________________PLAYBACK_GESTURES
 $(document).ready(function() {
 
     var element = $('#element');
@@ -46,14 +73,14 @@ $(document).ready(function() {
 
     element.touch = {}
 
-    element.click(function() {
-        console.log(this);
-        if (this.paused) {
-            this.play();
-        } else {
-            this.pause();
-        }
-    });
+    // element.click(function() {
+    //     console.log(this);
+    //     if (this.paused) {
+    //         this.play();
+    //     } else {
+    //         this.pause();
+    //     }
+    // });
     element.get(0).ontouchstart = function(e) {
         // Store start position
         element.touch.x = e.touches[0].clientX;
@@ -81,12 +108,13 @@ $(document).ready(function() {
 
 
 //DIM Control_______________________________
-$('#contrast').on('input', function() {
-    $('#element').css('opacity', $(this).val());
-});
+// $('#contrast').on('input', function() {
+//     $('#element').css('opacity', $(this).val());
+// });
+
 
 // ___________DEFAULT_VOLUME
-$("video").prop("volume", 0.5);
+$("video").prop("volume", 0.6);
 
 
 //URL______________________________
@@ -94,6 +122,7 @@ function changeURL() {
     var newURL = document.getElementById("newURL").value;
     document.getElementById("element").src = newURL;
 }
+
 
 // Registering ServiceWorker
 if ('serviceWorker' in navigator) {

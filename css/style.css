@@ -9,7 +9,6 @@
     cursor: default;
     user-select: none;
     outline: none;
-    color: #FFF;
 }
 
 html, body {
@@ -22,8 +21,18 @@ html, body {
     overflow: hidden;
 }
 
-.info {
-    display: none;
+.status {
+    height: 2px;
+    width: 100px;
+    margin: 23px 17px;
+}
+
+.error {
+    background: #FF4A47;
+}
+
+.playing {
+    background: #4CAF50;
 }
 
 #contrastFilter {
@@ -38,7 +47,9 @@ html, body {
 }
 
 .video-container {
+    position: fixed;
     height: 40vh;
+    width: 100vw;
 }
 
 video {
@@ -47,11 +58,11 @@ video {
     background: black;
     top: 0;
     resize: both;
-    filter: brightness(1);
 }
 
 video::-webkit-media-controls {
     font-family: 'Product Sans';
+    cursor: grab;
     opacity: 0.9;
     filter: grayscale();
 }
@@ -66,8 +77,10 @@ video::-webkit-media-controls-timeline {}
 
 .input-container {
     position: absolute;
+    background: #FAFAFA;
     height: 60vh;
     width: 100vw;
+    margin-top: 40vh;
     z-index: 2;
 }
 
@@ -112,6 +125,10 @@ svg {
     fill: rgba(0, 0, 0, 0.38);
 }
 
+svg:hover {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
 span svg {
     position: absolute;
 }
@@ -120,11 +137,8 @@ span svg {
     .video-container {
         height: 100vh;
     }
-}
-
-.data {
-    color: black;
-    font-size: 20px;
-    margin: 17px;
-    display: block;
+    .input-container {
+        height: 100vh;
+        margin-top: 100vh;
+    }
 }
